@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="lib/tabulator.min.css" />
+    <link rel="stylesheet" href="style.css?v=1.0" />
+    <title>Invoice Generator</title>
+  </head>
+  <body>
+    <div id="main-div">
+      <div id="header-row">
+        <div>
+          <button id ="clear-cache-btn" class="btn btn-warning">Clear Cache</button>
+        </div>
+        <div id="sageid-direct" style="display: none;">
+          <input
+            id="sageid-direct-input"
+            placeholder="Directly paste in sage ids here..."
+          />
+          <button class="btn btn-direct" id="sageid-direct-btn">
+            Directly Generate from SageIds
+          </button>
+        </div>
+        <div id="year-month-select" style="margin-left: auto">
+          <label for="input-yearmonth" class="yearmonth-label">
+            Generate Invoices For:
+          </label>
+          <input type="month" id="input-yearmonth" />
+        </div>
+      </div>
+      <div id="button-wrapper">
+        <button class="btn" id="load-sheets-btn">
+          Refresh Sheets from Google Sheet with invoices
+        </button>
+      </div>
+      <h1 id="main-header">Choose a tab in Google Sheet with invoices</h1>
+      <div id="main-message"></div>
+      <div id="sheet-table"></div>
+      <div id="teams-table"></div>
+      <div id="custom-rows-table"></div>
+      <div id="loggedexpense-table"></div>
+      <div id="invoice-table"></div>
+    </div>
+
+    <script src="lib/tabulator.min.js"></script>
+
+    <script src="js/choice_tables.js"></script>
+    
+    <script src="js/step1_sheets.js"></script>
+    <script src="js/step2_teams_utils.js"></script>
+    <script src="js/step2_teams.js"></script>
+    <script src="js/step3_loggedexpense.js"></script>
+    <script src="js/step4_custom_rows.js"></script>
+    <script src="js/step5_invoice_preview.js"></script>
+
+    <script src="js/app_controller.js"></script>
+    <script src="js/app_state.js"></script>
+ 
+  </body>
+</html>

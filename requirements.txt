@@ -1,0 +1,8 @@
+azure-identity
+numpy
+pandas
+pyodbc
+pywebview
+python-dotenv
+requests
+SQLAlchemy

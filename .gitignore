@@ -1,0 +1,34 @@
+# Environment & Secrets
+.env
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Debug Files
+debug_*.xlsx
+*_test.xlsx
+test*.sql
+
+# Database & Configs
+test.db
+
+# Notebooks & IDE
+test_nb.ipynb
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# OS Generated Files
+*.ini
+.DS_Store
+Thumbs.db
+
+# Project-specific
+programfiles/
