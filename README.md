@@ -39,7 +39,6 @@ This repository contains a Python back-end engine in `\core` and a vanilla JS fr
 2. **Data Extraction**:
    * Executes SQL queries across `db_b_engine` (for MAIN_CHARGE, Fees, and loggedexpense data) and `db_c_engine` (for mapping default sage data).
    * Processes MAIN_CHARGE queries in chunks (200 teams per batch) to manage payload sizes.
-         * May want to consider pushing consolidated MAIN_CHARGE into Database C after PRs are locked
 3. **Normalization & Mapping**:
    * Standardizes datasets from Core into uniform DataFrames (`TeamId`, `Amount`, `sage_lineitem_key`).
    * Joins line item keys (`ItemId`, `Memo`, `Location`, `SoDocumentEntryClassId`) based on Logged Expense default relationships.
